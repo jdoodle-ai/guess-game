@@ -10,9 +10,9 @@ def guess_number():
         attempts += 1
 
         if guess > target:
-            print("Too low! Try again.")
-        elif guess < target:
             print("Too high! Try again.")
+        elif guess < target:
+            print("Too low! Try again.")
         else:
             print(f"Congratulations! You guessed it in {attempts} attempts.")
             break
