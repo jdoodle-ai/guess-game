@@ -4,10 +4,12 @@ import random
 def guess_number():
     target = random.randint(1, 100)
     attempts = 0
+    previous_guesses = []
 
     while True:
         guess = int(input("Guess a number between 1 and 100: "))
         attempts += 1
+        previous_guesses.append(guess)
 
         if guess > target:
             print("Too low! Try again.")
@@ -15,6 +17,7 @@ def guess_number():
             print("Too high! Try again.")
         else:
             print(f"Congratulations! You guessed it in {attempts} attempts.")
+            print(f"Previous guesses: {previous_guesses}")
             break
 
 
