@@ -18,6 +18,9 @@ def guess_number():
         else:
             print(f"Congratulations! You guessed it in {attempts} attempts.")
             break
+        if attempts > 8:
+            print("You suck at this game! Try harder next time")
+            break
 
 
 if __name__ == "__main__":
