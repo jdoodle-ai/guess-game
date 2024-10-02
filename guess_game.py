@@ -14,7 +14,10 @@ def guess_number():
         elif guess < target:
             print("Too high! Try again.")
         else:
-            print(f"Congratulations! You guessed it in {attempts} attempts.")
+            if attempts > 50:
+                print("Sorry, you've exceeded the maximum number of attempts. You lose!")
+            else:
+                print(f"Congratulations! You guessed it in {attempts} attempts.")
             break
 
 
