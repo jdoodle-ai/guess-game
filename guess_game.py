@@ -2,11 +2,11 @@ import random
 
 
 def guess_number():
-    target = random.randint(1, 100)
+    target = random.uniform(0, 100)
     attempts = 0
 
     while True:
-        guess = int(input("Guess a number between 1 and 100: "))
+        guess = float(input("Guess a number between 0 and 100: "))
         attempts += 1
 
         if guess > target:
